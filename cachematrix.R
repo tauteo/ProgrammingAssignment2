@@ -28,6 +28,8 @@ makeCacheMatrix <- function(x = matrix()) {
 ## been calculated before, it is calculated and stored in the
 ## matrix internal cache, otherwise the inverse is returned
 ## directly.
+## This function assumes that the supplied matrix is square
+## and that it has an inverse
 
 cacheSolve <- function(x, ...) {
   inv <- x$get_inverse()
